@@ -92,6 +92,7 @@ html, body {
     text-align: center;
     font-size: 7rem;
     line-height: 1;
+    margin-top: 30px;
     margin-bottom: 0px;
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
 }
