@@ -90,31 +90,27 @@ html, body {
    ===================================================== */
 .pill-icon {
     text-align: center;
-    font-size: 4.5rem;
+    font-size: 7rem;
     line-height: 1;
-    margin-bottom: 4px;
+    margin-bottom: 0px;
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
 }
 
 /* =====================================================
-   제목 - "아프지마" (둥근 서체, 2배 확대)
+   제목 - "아프지마" (두꺼운 굴림 볼드체, 더 크게, 아래로)
    ===================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
-
 h1 {
     color: #1A1A1A !important;
-    font-family: 'Jua', 'Pretendard', sans-serif !important;
+    font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', 'Gulim', sans-serif !important;
     text-align: center;
-    font-weight: 400 !important;
-    font-size: 4.8rem !important;
-    letter-spacing: -1px;
-    margin-bottom: 4px !important;
+    font-weight: 900 !important;
+    font-size: 6.2rem !important;
+    letter-spacing: -2px;
+    margin-top: 20px !important;
+    margin-bottom: 8px !important;
     line-height: 1.1 !important;
-    text-shadow:
-        3px 3px 0 #FFFFFF,
-        -3px 3px 0 #FFFFFF,
-        3px -3px 0 #FFFFFF,
-        -3px -3px 0 #FFFFFF !important;
+    -webkit-text-stroke: 1.5px #1A1A1A;
+    text-shadow: none !important;
 }
 
 /* =====================================================
@@ -136,7 +132,7 @@ h1 {
    ===================================================== */
 div[data-testid="stVerticalBlockBorderWrapper"] {
     background: #FFFFFF !important;
-    border: 5px solid #000000 !important;
+    border: 8px solid #000000 !important;
     border-radius: 22px !important;
     padding: 14px !important;
     margin-top: 14px !important;
@@ -414,18 +410,12 @@ hr {
     }
 
     .pill-icon {
-        font-size: 3.2rem !important;
+        font-size: 5rem !important;
     }
 
     h1 {
-        font-size: 12vw !important;
-        letter-spacing: -0.7px !important;
-    }
-
-    .stCaption,
-    [data-testid="stCaptionContainer"] {
-        font-size: 0.8rem !important;
-        line-height: 1.5 !important;
+        font-size: 16vw !important;
+        letter-spacing: -1px !important;
     }
 
     div.stButton > button {
@@ -434,7 +424,7 @@ hr {
     }
 
     div[data-testid="stVerticalBlockBorderWrapper"] {
-        border-width: 4px !important;
+        border-width: 6px !important;
         padding: 10px !important;
     }
 
@@ -489,11 +479,6 @@ st.markdown(
 )
 
 st.title("아프지마")
-
-st.caption(
-    "복잡한 처방전과 약 봉지, 사진 한 장으로 "
-    "부모님께 핵심만 요약해 드립니다."
-)
 
 # ★ 흰 박스(검은 테두리) 안에 업로드 + 나이 입력을 함께 배치
 with st.container(border=True):
