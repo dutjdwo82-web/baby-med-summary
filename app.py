@@ -44,6 +44,10 @@ st.markdown("""
 /* =====================================================
    전체 배경 - 노란색 계열
    ===================================================== */
+html, body {
+    overflow-x: hidden !important;
+}
+
 .stApp {
     background: linear-gradient(
         180deg,
@@ -93,21 +97,24 @@ st.markdown("""
 }
 
 /* =====================================================
-   제목 - "아프지마"
+   제목 - "아프지마" (둥근 서체, 2배 확대)
    ===================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
 h1 {
     color: #1A1A1A !important;
-    font-family: 'Pretendard', sans-serif;
+    font-family: 'Jua', 'Pretendard', sans-serif !important;
     text-align: center;
-    font-weight: 900 !important;
-    font-size: 2.4rem !important;
+    font-weight: 400 !important;
+    font-size: 4.8rem !important;
     letter-spacing: -1px;
     margin-bottom: 4px !important;
+    line-height: 1.1 !important;
     text-shadow:
-        2px 2px 0 #FFFFFF,
-        -2px 2px 0 #FFFFFF,
-        2px -2px 0 #FFFFFF,
-        -2px -2px 0 #FFFFFF !important;
+        3px 3px 0 #FFFFFF,
+        -3px 3px 0 #FFFFFF,
+        3px -3px 0 #FFFFFF,
+        -3px -3px 0 #FFFFFF !important;
 }
 
 /* =====================================================
@@ -129,7 +136,7 @@ h1 {
    ===================================================== */
 div[data-testid="stVerticalBlockBorderWrapper"] {
     background: #FFFFFF !important;
-    border: 2.5px solid #000000 !important;
+    border: 5px solid #000000 !important;
     border-radius: 22px !important;
     padding: 14px !important;
     margin-top: 14px !important;
@@ -157,7 +164,7 @@ div[data-testid="stFileUploader"] section {
 }
 
 div[data-testid="stFileUploader"] section > div {
-    background: #FFFFFF !important;
+    background: transparent !important;
     border-color: transparent !important;
 }
 
@@ -166,33 +173,27 @@ div[data-testid="stFileUploader"] label {
     font-weight: 800 !important;
 }
 
-/* ★ 입체감 있는 3D 버튼으로 변경 */
+/* ★ 입체감/그림자 제거 - 평평한 버튼 */
 div[data-testid="stFileUploader"] button {
     border-radius: 10px !important;
-    border: none !important;
+    border: 1.5px solid #000000 !important;
     color: #000000 !important;
     font-weight: 700 !important;
-    background: linear-gradient(180deg, #FFFFFF 0%, #DCF2FC 100%) !important;
-    box-shadow:
-        0 4px 0 #A9DCF0,
-        0 6px 10px rgba(44, 145, 185, 0.25) !important;
-    transform: translateY(0);
-    transition: all 0.12s ease;
+    background: #FFFFFF !important;
+    box-shadow: none !important;
+    transform: none !important;
 }
 
 div[data-testid="stFileUploader"] button:hover {
-    background: linear-gradient(180deg, #FFFFFF 0%, #CDEBFB 100%) !important;
-    transform: translateY(-1px);
-    box-shadow:
-        0 5px 0 #A9DCF0,
-        0 8px 12px rgba(44, 145, 185, 0.3) !important;
+    background: #F5F5F5 !important;
+    box-shadow: none !important;
+    transform: none !important;
 }
 
 div[data-testid="stFileUploader"] button:active {
-    transform: translateY(3px);
-    box-shadow:
-        0 1px 0 #A9DCF0,
-        0 2px 4px rgba(44, 145, 185, 0.25) !important;
+    background: #EAEAEA !important;
+    box-shadow: none !important;
+    transform: none !important;
 }
 
 /* ★ 업로드 영역 안의 모든 텍스트(영어/기호 포함)를 검은색으로 통일 */
@@ -218,13 +219,14 @@ div[data-testid="stNumberInput"] label {
     font-weight: 800 !important;
 }
 
-/* 실제 입력창+버튼을 감싸는 박스 - 흰 박스 안에 자연스럽게 */
+/* 실제 입력창+버튼을 감싸는 박스 - 음영 제거, 폭 절반으로 축소 */
 div[data-testid="stNumberInputContainer"] {
-    background: #F7F7F7 !important;
+    background: transparent !important;
     border: none !important;
     border-radius: 12px !important;
-    padding: 8px 14px 8px 14px !important;
+    padding: 6px 0 6px 0 !important;
     box-shadow: none !important;
+    width: 50% !important;
 }
 
 /* ★ 숫자 입력창 안쪽 파란 테두리 제거 - 바깥 검은 테두리 하나만 보이게 */
@@ -243,9 +245,9 @@ div[data-testid="stNumberInput"] input:focus {
     box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15) !important;
 }
 
-/* 숫자 +/- 버튼 영역 */
+/* 숫자 +/- 버튼 영역 - 음영 제거 */
 div[data-testid="stNumberInput"] button {
-    background: #EAF8FF !important;
+    background: transparent !important;
     border-color: transparent !important;
     color: #000000 !important;
 }
@@ -407,21 +409,23 @@ hr {
    ===================================================== */
 @media (max-width: 600px) {
     .block-container {
-        margin: 10px !important;
-        padding: 1.4rem 1rem 1.3rem 1rem !important;
-        border-radius: 23px !important;
-        border-width: 2px !important;
+        margin: 8px !important;
+        padding: 1.2rem 0.8rem 1.2rem 0.8rem !important;
+    }
+
+    .pill-icon {
+        font-size: 3.2rem !important;
     }
 
     h1 {
-        font-size: 6vw !important;
+        font-size: 12vw !important;
         letter-spacing: -0.7px !important;
     }
 
     .stCaption,
     [data-testid="stCaptionContainer"] {
-        font-size: 0.88rem !important;
-        line-height: 1.55 !important;
+        font-size: 0.8rem !important;
+        line-height: 1.5 !important;
     }
 
     div.stButton > button {
@@ -429,14 +433,17 @@ hr {
         font-size: 1.05rem !important;
     }
 
-    div[data-testid="stFileUploader"] {
+    div[data-testid="stVerticalBlockBorderWrapper"] {
+        border-width: 4px !important;
         padding: 10px !important;
-        border-radius: 17px !important;
+    }
+
+    div[data-testid="stFileUploader"] {
+        padding: 6px !important;
     }
 
     div[data-testid="stNumberInputContainer"] {
-        border-radius: 17px !important;
-        padding: 10px 14px 8px 14px !important;
+        width: 65% !important;
     }
 
     h2 {
