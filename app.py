@@ -60,7 +60,7 @@ st.markdown("""
 .block-container {
     max-width: 900px !important;
     background: #FFFFFF !important;
-    border: 3px solid #79CFEF !important;
+    border: 3px solid #000000 !important;
     border-radius: 30px !important;
     padding: 2.2rem 2.4rem 2rem 2.4rem !important;
     margin-top: 2rem !important;
@@ -81,7 +81,7 @@ st.markdown("""
    제목
    ===================================================== */
 h1 {
-    color: #126A9C !important;
+    color: #000000 !important;
     font-family: 'Pretendard', sans-serif;
     text-align: center;
     font-weight: 800 !important;
@@ -96,7 +96,7 @@ h1 {
 .stCaption,
 [data-testid="stCaptionContainer"] {
     text-align: center !important;
-    color: #34596B !important;
+    color: #000000 !important;
     font-size: 1rem !important;
     font-weight: 700 !important;
     line-height: 1.6 !important;
@@ -108,7 +108,7 @@ h1 {
    ===================================================== */
 div[data-testid="stFileUploader"] {
     background: #F5FCFF !important;
-    border: 3px solid #62C4E9 !important;
+    border: 3px solid #000000 !important;
     border-radius: 20px !important;
     padding: 14px !important;
     margin-top: 8px !important;
@@ -116,33 +116,34 @@ div[data-testid="stFileUploader"] {
     box-shadow: 0 5px 16px rgba(44, 145, 185, 0.15) !important;
 }
 
+/* ★ 점선 박스 제거 - 테두리 없앰 */
 div[data-testid="stFileUploader"] section {
     background: #FFFFFF !important;
-    border: 3px dashed #35BCEB !important;
+    border: none !important;
     border-radius: 15px !important;
     box-shadow: none !important;
 }
 
 div[data-testid="stFileUploader"] section > div {
     background: #FFFFFF !important;
-    border-color: #35BCEB !important;
+    border-color: transparent !important;
 }
 
 div[data-testid="stFileUploader"] label {
-    color: #185E7D !important;
+    color: #000000 !important;
     font-weight: 800 !important;
 }
 
 div[data-testid="stFileUploader"] button {
     border-radius: 10px !important;
-    border: 2px solid #7BCDEA !important;
+    border: 2px solid #000000 !important;
     color: #176A8E !important;
     font-weight: 700 !important;
     background: #F1FBFF !important;
 }
 
 div[data-testid="stFileUploader"] button:hover {
-    border-color: #35BCEB !important;
+    border-color: #000000 !important;
     background: #E7F8FF !important;
 }
 
@@ -160,7 +161,7 @@ div[data-testid="stNumberInput"] {
 
 /* NumberInput 라벨 (박스 밖) */
 div[data-testid="stNumberInput"] label {
-    color: #185E7D !important;
+    color: #000000 !important;
     font-weight: 800 !important;
 }
 
@@ -173,9 +174,9 @@ div[data-testid="stNumberInputContainer"] {
     box-shadow: 0 5px 16px rgba(44, 145, 185, 0.15) !important;
 }
 
-/* 숫자 입력창 바깥 - 바깥 박스와 이중 테두리 되지 않도록 옅은 색 유지 */
+/* ★ 숫자 입력창 안쪽 파란 테두리 제거 - 바깥 검은 테두리 하나만 보이게 */
 div[data-testid="stNumberInput"] input {
-    border: 2px solid #8BD8F4 !important;
+    border: none !important;
     border-radius: 12px !important;
     background: #FFFFFF !important;
     color: #17536C !important;
@@ -183,16 +184,16 @@ div[data-testid="stNumberInput"] input {
     box-shadow: none !important;
 }
 
-/* 숫자 입력창 focus */
+/* 숫자 입력창 focus - 테두리 없이 은은한 그림자만 */
 div[data-testid="stNumberInput"] input:focus {
-    border: 2px solid #35BCEB !important;
-    box-shadow: 0 0 0 2px rgba(53, 188, 235, 0.15) !important;
+    border: none !important;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.15) !important;
 }
 
 /* 숫자 +/- 버튼 영역 */
 div[data-testid="stNumberInput"] button {
     background: #EAF8FF !important;
-    border-color: #8BD8F4 !important;
+    border-color: transparent !important;
     color: #176A8E !important;
 }
 
@@ -231,7 +232,7 @@ div.stButton > button:active {
    ===================================================== */
 [data-testid="stImage"] {
     background: #F5FCFF !important;
-    border: 2px solid #8BD8F4 !important;
+    border: 2px solid #000000 !important;
     border-radius: 20px !important;
     padding: 12px !important;
     margin-top: 15px !important;
@@ -242,11 +243,11 @@ div.stButton > button:active {
    분석 결과 제목
    ===================================================== */
 h2 {
-    color: #126A9C !important;
+    color: #000000 !important;
     font-weight: 800 !important;
     font-size: 1.35rem !important;
     background: #E9F8FF !important;
-    border: 2px solid #8BD8F4 !important;
+    border: 2px solid #000000 !important;
     border-radius: 17px !important;
     padding: 13px 17px !important;
     margin-top: 25px !important;
@@ -258,10 +259,10 @@ h2 {
    ===================================================== */
 div[data-testid="stAlert"] {
     border-radius: 18px !important;
-    border: 2px solid #8BD8F4 !important;
+    border: 2px solid #000000 !important;
     background: #F8FDFF !important;
     box-shadow: 0 5px 16px rgba(44, 145, 185, 0.10) !important;
-    color: #294D60 !important;
+    color: #000000 !important;
 }
 
 div[data-testid="stAlert"] p {
@@ -339,7 +340,7 @@ hr {
     margin-top: 35px;
     padding: 18px;
     background: #F2FAFD;
-    border: 2px solid #C5EAF6;
+    border: 2px solid #000000;
     border-radius: 17px;
 }
 
