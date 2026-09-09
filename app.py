@@ -104,7 +104,7 @@ h1 {
     font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', 'Gulim', sans-serif !important;
     text-align: center;
     font-weight: 900 !important;
-    font-size: 6.2rem !important;
+    font-size: 8.2rem !important;
     letter-spacing: -2px;
     margin-top: 20px !important;
     margin-bottom: 8px !important;
