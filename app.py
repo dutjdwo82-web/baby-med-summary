@@ -60,9 +60,9 @@ st.markdown("""
 .block-container {
     max-width: 900px !important;
     background: #FFFFFF !important;
-    border: 3px solid #000000 !important;
+    border: 1.5px solid #000000 !important;
     border-radius: 30px !important;
-    padding: 2.2rem 2.4rem 2rem 2.4rem !important;
+    padding: 1.5rem 2rem 1.4rem 2rem !important;
     margin-top: 2rem !important;
     margin-bottom: 2rem !important;
     box-shadow: 0 10px 35px rgba(40, 139, 181, 0.16) !important;
@@ -77,6 +77,11 @@ st.markdown("""
     box-shadow: none !important;
 }
 
+/* ★ 단락(요소) 간 간격 전반적으로 좁힘 */
+.element-container {
+    margin-bottom: 0.2rem !important;
+}
+
 /* =====================================================
    제목
    ===================================================== */
@@ -87,7 +92,7 @@ h1 {
     font-weight: 800 !important;
     font-size: 1.9rem !important;
     letter-spacing: -1px;
-    margin-bottom: 8px !important;
+    margin-bottom: 4px !important;
 }
 
 /* =====================================================
@@ -100,7 +105,7 @@ h1 {
     font-size: 1rem !important;
     font-weight: 700 !important;
     line-height: 1.6 !important;
-    margin-bottom: 18px !important;
+    margin-bottom: 8px !important;
 }
 
 /* =====================================================
@@ -108,11 +113,11 @@ h1 {
    ===================================================== */
 div[data-testid="stFileUploader"] {
     background: #F5FCFF !important;
-    border: 3px solid #000000 !important;
+    border: 1.5px solid #000000 !important;
     border-radius: 20px !important;
     padding: 14px !important;
-    margin-top: 8px !important;
-    margin-bottom: 18px !important;
+    margin-top: 2px !important;
+    margin-bottom: 6px !important;
     box-shadow: 0 5px 16px rgba(44, 145, 185, 0.15) !important;
 }
 
@@ -136,7 +141,7 @@ div[data-testid="stFileUploader"] label {
 
 div[data-testid="stFileUploader"] button {
     border-radius: 10px !important;
-    border: 2px solid #000000 !important;
+    border: 1px solid #000000 !important;
     color: #176A8E !important;
     font-weight: 700 !important;
     background: #F1FBFF !important;
@@ -147,6 +152,11 @@ div[data-testid="stFileUploader"] button:hover {
     background: #E7F8FF !important;
 }
 
+/* ★ 업로드 영역 안의 모든 텍스트(영어/기호 포함)를 검은색으로 통일 */
+div[data-testid="stFileUploader"] * {
+    color: #000000 !important;
+}
+
 /* =====================================================
    🗓️ 나이 입력 영역 - 강제 적용
    ★ 실제 DOM 구조 확인 결과:
@@ -155,8 +165,8 @@ div[data-testid="stFileUploader"] button:hover {
      stNumberInputContainer에만 테두리를 적용함
    ===================================================== */
 div[data-testid="stNumberInput"] {
-    margin-top: 5px !important;
-    margin-bottom: 20px !important;
+    margin-top: 2px !important;
+    margin-bottom: 8px !important;
 }
 
 /* NumberInput 라벨 (박스 밖) */
@@ -168,7 +178,7 @@ div[data-testid="stNumberInput"] label {
 /* 실제 입력창+버튼을 감싸는 박스 - 여기에만 테두리 적용 */
 div[data-testid="stNumberInputContainer"] {
     background: #F5FCFF !important;
-    border: 3px solid #000000 !important;
+    border: 1.5px solid #000000 !important;
     border-radius: 20px !important;
     padding: 12px 18px 10px 18px !important;
     box-shadow: 0 5px 16px rgba(44, 145, 185, 0.15) !important;
@@ -194,7 +204,12 @@ div[data-testid="stNumberInput"] input:focus {
 div[data-testid="stNumberInput"] button {
     background: #EAF8FF !important;
     border-color: transparent !important;
-    color: #176A8E !important;
+    color: #000000 !important;
+}
+
+/* ★ 숫자 입력 영역 안의 모든 텍스트(숫자/기호 포함)를 검은색으로 통일 */
+div[data-testid="stNumberInputContainer"] * {
+    color: #000000 !important;
 }
 
 /* =====================================================
@@ -232,7 +247,7 @@ div.stButton > button:active {
    ===================================================== */
 [data-testid="stImage"] {
     background: #F5FCFF !important;
-    border: 2px solid #000000 !important;
+    border: 1px solid #000000 !important;
     border-radius: 20px !important;
     padding: 12px !important;
     margin-top: 15px !important;
@@ -247,7 +262,7 @@ h2 {
     font-weight: 800 !important;
     font-size: 1.35rem !important;
     background: #E9F8FF !important;
-    border: 2px solid #000000 !important;
+    border: 1px solid #000000 !important;
     border-radius: 17px !important;
     padding: 13px 17px !important;
     margin-top: 25px !important;
@@ -259,7 +274,7 @@ h2 {
    ===================================================== */
 div[data-testid="stAlert"] {
     border-radius: 18px !important;
-    border: 2px solid #000000 !important;
+    border: 1px solid #000000 !important;
     background: #F8FDFF !important;
     box-shadow: 0 5px 16px rgba(44, 145, 185, 0.10) !important;
     color: #000000 !important;
@@ -337,10 +352,10 @@ hr {
     color: #668A99;
     font-size: 0.82rem;
     line-height: 1.7;
-    margin-top: 35px;
+    margin-top: 18px;
     padding: 18px;
     background: #F2FAFD;
-    border: 2px solid #000000;
+    border: 1px solid #000000;
     border-radius: 17px;
 }
 
