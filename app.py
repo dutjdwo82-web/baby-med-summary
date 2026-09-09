@@ -479,7 +479,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.title("아프지마")
+st.title("약먹어")
 
 # ★ 흰 박스(검은 테두리) 안에 업로드 + 나이 입력을 함께 배치
 with st.container(border=True):
