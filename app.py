@@ -133,7 +133,7 @@ h1 {
    ===================================================== */
 div[data-testid="stVerticalBlockBorderWrapper"] {
     background: #FFFFFF !important;
-    border: 8px solid #000000 !important;
+    border: 13px solid #000000 !important;
     border-radius: 22px !important;
     padding: 14px !important;
     margin-top: 14px !important;
