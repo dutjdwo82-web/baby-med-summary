@@ -42,30 +42,29 @@ st.markdown("""
 <style>
 
 /* =====================================================
-   전체 배경
+   전체 배경 - 노란색 계열
    ===================================================== */
 .stApp {
     background: linear-gradient(
         180deg,
-        #DDF5FF 0%,
-        #CDEEFF 50%,
-        #EAF8FF 100%
+        #FFD54A 0%,
+        #FFC531 55%,
+        #FFB300 100%
     ) !important;
     min-height: 100vh;
 }
 
 /* =====================================================
-   전체 메인 영역
+   전체 메인 영역 - 배경 없이 노란 바탕 그대로 비침
    ===================================================== */
 .block-container {
     max-width: 900px !important;
-    background: #E4F6FF !important;
+    background: transparent !important;
     border: none !important;
-    border-radius: 30px !important;
-    padding: 1.5rem 2rem 1.4rem 2rem !important;
-    margin-top: 2rem !important;
-    margin-bottom: 2rem !important;
-    box-shadow: 0 10px 35px rgba(40, 139, 181, 0.16) !important;
+    padding: 2rem 1.6rem 1.4rem 1.6rem !important;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+    box-shadow: none !important;
 }
 
 /* =====================================================
@@ -83,47 +82,75 @@ st.markdown("""
 }
 
 /* =====================================================
-   제목
+   💊 큰 알약 아이콘
    ===================================================== */
-h1 {
-    color: #000000 !important;
-    font-family: 'Pretendard', sans-serif;
+.pill-icon {
     text-align: center;
-    font-weight: 800 !important;
-    font-size: 1.9rem !important;
-    letter-spacing: -1px;
-    margin-bottom: 4px !important;
+    font-size: 4.5rem;
+    line-height: 1;
+    margin-bottom: 4px;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
 }
 
 /* =====================================================
-   설명 문구
+   제목 - "아프지마"
+   ===================================================== */
+h1 {
+    color: #1A1A1A !important;
+    font-family: 'Pretendard', sans-serif;
+    text-align: center;
+    font-weight: 900 !important;
+    font-size: 2.4rem !important;
+    letter-spacing: -1px;
+    margin-bottom: 4px !important;
+    text-shadow:
+        2px 2px 0 #FFFFFF,
+        -2px 2px 0 #FFFFFF,
+        2px -2px 0 #FFFFFF,
+        -2px -2px 0 #FFFFFF !important;
+}
+
+/* =====================================================
+   설명 문구 - 작은 정보성 텍스트
    ===================================================== */
 .stCaption,
 [data-testid="stCaptionContainer"] {
     text-align: center !important;
-    color: #000000 !important;
-    font-size: 1rem !important;
+    color: #3A2E00 !important;
+    font-size: 0.82rem !important;
     font-weight: 700 !important;
     line-height: 1.6 !important;
     margin-bottom: 8px !important;
 }
 
 /* =====================================================
-   📸 사진 업로드 영역 - 강제 적용
+   📦 업로드+나이입력을 감싸는 흰색 박스 (검은 테두리)
+   st.container(border=True) 로 생성된 래퍼
    ===================================================== */
-div[data-testid="stFileUploader"] {
-    background: #F5FCFF !important;
-    border: none !important;
-    border-radius: 20px !important;
+div[data-testid="stVerticalBlockBorderWrapper"] {
+    background: #FFFFFF !important;
+    border: 2.5px solid #000000 !important;
+    border-radius: 22px !important;
     padding: 14px !important;
-    margin-top: 2px !important;
-    margin-bottom: 6px !important;
-    box-shadow: 0 5px 16px rgba(44, 145, 185, 0.15) !important;
+    margin-top: 14px !important;
+    margin-bottom: 10px !important;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15) !important;
 }
 
-/* ★ 점선 박스 제거 - 테두리 없앰 */
+/* =====================================================
+   📸 사진 업로드 영역 - 흰 박스 안에 자연스럽게
+   ===================================================== */
+div[data-testid="stFileUploader"] {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin-top: 2px !important;
+    margin-bottom: 6px !important;
+    box-shadow: none !important;
+}
+
 div[data-testid="stFileUploader"] section {
-    background: #FFFFFF !important;
+    background: transparent !important;
     border: none !important;
     border-radius: 15px !important;
     box-shadow: none !important;
@@ -191,13 +218,13 @@ div[data-testid="stNumberInput"] label {
     font-weight: 800 !important;
 }
 
-/* 실제 입력창+버튼을 감싸는 박스 - 여기에만 테두리 적용 */
+/* 실제 입력창+버튼을 감싸는 박스 - 흰 박스 안에 자연스럽게 */
 div[data-testid="stNumberInputContainer"] {
-    background: #F5FCFF !important;
+    background: #F7F7F7 !important;
     border: none !important;
-    border-radius: 20px !important;
-    padding: 12px 18px 10px 18px !important;
-    box-shadow: 0 5px 16px rgba(44, 145, 185, 0.15) !important;
+    border-radius: 12px !important;
+    padding: 8px 14px 8px 14px !important;
+    box-shadow: none !important;
 }
 
 /* ★ 숫자 입력창 안쪽 파란 테두리 제거 - 바깥 검은 테두리 하나만 보이게 */
@@ -447,27 +474,35 @@ def show_loading(text):
 # =========================================================
 # 메인
 # =========================================================
-st.title("👶 아이 약 3초 한눈 요약 💊")
+
+# ★ 큰 알약 아이콘
+st.markdown(
+    "<div class='pill-icon'>💊</div>",
+    unsafe_allow_html=True
+)
+
+st.title("아프지마")
 
 st.caption(
     "복잡한 처방전과 약 봉지, 사진 한 장으로 "
     "부모님께 핵심만 요약해 드립니다."
 )
 
-st.write("")
+# ★ 흰 박스(검은 테두리) 안에 업로드 + 나이 입력을 함께 배치
+with st.container(border=True):
 
-uploaded_file = st.file_uploader(
-    "📸 약 봉지 또는 처방전 사진을 올려주세요",
-    type=["jpg", "jpeg", "png"]
-)
+    uploaded_file = st.file_uploader(
+        "📸 약 봉지 또는 처방전 사진을 올려주세요",
+        type=["jpg", "jpeg", "png"]
+    )
 
-age = st.number_input(
-    "🗓️ 아이 만 나이 (세)",
-    min_value=0,
-    max_value=12,
-    value=3,
-    step=1
-)
+    age = st.number_input(
+        "🗓️ 아이 만 나이 (세)",
+        min_value=0,
+        max_value=12,
+        value=3,
+        step=1
+    )
 
 st.write("")
 
