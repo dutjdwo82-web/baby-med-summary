@@ -59,8 +59,8 @@ st.markdown("""
    ===================================================== */
 .block-container {
     max-width: 900px !important;
-    background: #FFFFFF !important;
-    border: 1.5px solid #000000 !important;
+    background: #E4F6FF !important;
+    border: none !important;
     border-radius: 30px !important;
     padding: 1.5rem 2rem 1.4rem 2rem !important;
     margin-top: 2rem !important;
@@ -113,7 +113,7 @@ h1 {
    ===================================================== */
 div[data-testid="stFileUploader"] {
     background: #F5FCFF !important;
-    border: 1.5px solid #000000 !important;
+    border: none !important;
     border-radius: 20px !important;
     padding: 14px !important;
     margin-top: 2px !important;
@@ -141,7 +141,7 @@ div[data-testid="stFileUploader"] label {
 
 div[data-testid="stFileUploader"] button {
     border-radius: 10px !important;
-    border: 1px solid #000000 !important;
+    border: none !important;
     color: #176A8E !important;
     font-weight: 700 !important;
     background: #F1FBFF !important;
@@ -178,7 +178,7 @@ div[data-testid="stNumberInput"] label {
 /* 실제 입력창+버튼을 감싸는 박스 - 여기에만 테두리 적용 */
 div[data-testid="stNumberInputContainer"] {
     background: #F5FCFF !important;
-    border: 1.5px solid #000000 !important;
+    border: none !important;
     border-radius: 20px !important;
     padding: 12px 18px 10px 18px !important;
     box-shadow: 0 5px 16px rgba(44, 145, 185, 0.15) !important;
@@ -222,7 +222,7 @@ div.stButton > button {
     font-weight: 800 !important;
     font-size: 1.15rem !important;
     border-radius: 17px !important;
-    border: 2px solid #1477A5 !important;
+    border: none !important;
     padding: 15px 0px !important;
     box-shadow:
         0 6px 16px rgba(20, 127, 178, 0.30),
@@ -247,7 +247,7 @@ div.stButton > button:active {
    ===================================================== */
 [data-testid="stImage"] {
     background: #F5FCFF !important;
-    border: 1px solid #000000 !important;
+    border: none !important;
     border-radius: 20px !important;
     padding: 12px !important;
     margin-top: 15px !important;
@@ -262,7 +262,7 @@ h2 {
     font-weight: 800 !important;
     font-size: 1.35rem !important;
     background: #E9F8FF !important;
-    border: 1px solid #000000 !important;
+    border: none !important;
     border-radius: 17px !important;
     padding: 13px 17px !important;
     margin-top: 25px !important;
@@ -274,7 +274,7 @@ h2 {
    ===================================================== */
 div[data-testid="stAlert"] {
     border-radius: 18px !important;
-    border: 1px solid #000000 !important;
+    border: none !important;
     background: #F8FDFF !important;
     box-shadow: 0 5px 16px rgba(44, 145, 185, 0.10) !important;
     color: #000000 !important;
@@ -321,7 +321,7 @@ hr {
     font-weight: 700;
     color: #3C7188;
     background: #F3FBFE;
-    border: 1px solid #B9E6F5;
+    border: none;
     border-radius: 14px;
     padding: 10px 15px;
 }
@@ -355,7 +355,7 @@ hr {
     margin-top: 18px;
     padding: 18px;
     background: #F2FAFD;
-    border: 1px solid #000000;
+    border: none;
     border-radius: 17px;
 }
 
