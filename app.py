@@ -139,17 +139,33 @@ div[data-testid="stFileUploader"] label {
     font-weight: 800 !important;
 }
 
+/* ★ 입체감 있는 3D 버튼으로 변경 */
 div[data-testid="stFileUploader"] button {
     border-radius: 10px !important;
     border: none !important;
-    color: #176A8E !important;
+    color: #000000 !important;
     font-weight: 700 !important;
-    background: #F1FBFF !important;
+    background: linear-gradient(180deg, #FFFFFF 0%, #DCF2FC 100%) !important;
+    box-shadow:
+        0 4px 0 #A9DCF0,
+        0 6px 10px rgba(44, 145, 185, 0.25) !important;
+    transform: translateY(0);
+    transition: all 0.12s ease;
 }
 
 div[data-testid="stFileUploader"] button:hover {
-    border-color: #000000 !important;
-    background: #E7F8FF !important;
+    background: linear-gradient(180deg, #FFFFFF 0%, #CDEBFB 100%) !important;
+    transform: translateY(-1px);
+    box-shadow:
+        0 5px 0 #A9DCF0,
+        0 8px 12px rgba(44, 145, 185, 0.3) !important;
+}
+
+div[data-testid="stFileUploader"] button:active {
+    transform: translateY(3px);
+    box-shadow:
+        0 1px 0 #A9DCF0,
+        0 2px 4px rgba(44, 145, 185, 0.25) !important;
 }
 
 /* ★ 업로드 영역 안의 모든 텍스트(영어/기호 포함)를 검은색으로 통일 */
@@ -349,12 +365,12 @@ hr {
    ===================================================== */
 .footer-text {
     text-align: center;
-    color: #668A99;
+    color: #000000;
     font-size: 0.82rem;
     line-height: 1.7;
     margin-top: 18px;
     padding: 18px;
-    background: #F2FAFD;
+    background: transparent;
     border: none;
     border-radius: 17px;
 }
