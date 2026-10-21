@@ -469,6 +469,27 @@ footer {
     display: none !important;
 }
 
+/* Streamlit 상단 및 하단 표시 숨기기 */
+header {
+    visibility: hidden !important;
+}
+
+#MainMenu {
+    display: none !important;
+}
+
+footer {
+    display: none !important;
+}
+
+.stAppDeployButton {
+    display: none !important;
+}
+
+[data-testid="stStatusWidget"] {
+    display: none !important;
+}
+
 </style>
 """, unsafe_allow_html=True)
 
