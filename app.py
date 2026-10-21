@@ -452,6 +452,23 @@ textarea,
     border-radius: 12px !important;
 }
 
+/* Streamlit 메뉴 및 하단 표시 숨기기 */
+#MainMenu {
+    visibility: hidden !important;
+}
+
+footer {
+    visibility: hidden !important;
+}
+
+#stDecoration {
+    display: none !important;
+}
+
+.stAppDeployButton {
+    display: none !important;
+}
+
 </style>
 """, unsafe_allow_html=True)
 
