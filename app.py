@@ -102,15 +102,15 @@ html, body {
    ===================================================== */
 h1 {
     color: #1A1A1A !important;
-    font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', 'Gulim', sans-serif !important;
+    font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif !important;
     text-align: center;
-    font-weight: 900 !important;
+    font-weight: 800 !important;
     font-size: 40.2rem !important;
     letter-spacing: -2px;
-    margin-top: 20px !important;
-    margin-bottom: 8px !important;
-    line-height: 1.1 !important;
-    -webkit-text-stroke: 1.5px #1A1A1A;
+    margin-top: 0px !important;
+    margin-bottom: 18px !important;
+    line-height: 1.15 !important;
+    -webkit-text-stroke: 0.5px #1A1A1A;
     text-shadow: none !important;
 }
 
@@ -417,8 +417,10 @@ hr {
     }
 
     h1 {
-        font-size: 16vw !important;
+        font-size: 14vw !important;
         letter-spacing: -1px !important;
+        margin-top: 0px !important;
+        margin-bottom: 18px !important;
     }
 
     div.stButton > button {
