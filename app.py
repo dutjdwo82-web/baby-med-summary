@@ -490,6 +490,24 @@ footer {
     display: none !important;
 }
 
+/* 하단 Streamlit 배지 숨기기 */
+[data-testid="stAppViewBlockContainer"] ~ div,
+.stApp > div[data-testid="stDecoration"] {
+    /* 기존 화면 레이아웃은 유지 */
+}
+
+[data-testid="stToolbar"] {
+    display: none !important;
+}
+
+div[data-testid="stStatusWidget"] {
+    display: none !important;
+}
+
+#stDecoration {
+    display: none !important;
+}
+
 </style>
 """, unsafe_allow_html=True)
 
