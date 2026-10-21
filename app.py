@@ -90,10 +90,10 @@ html, body {
    ===================================================== */
 .pill-icon {
     text-align: center;
-    font-size: 10rem;
+    font-size: 30rem;
     line-height: 1;
-    margin-top: 100px;
-    margin-bottom: 0px;
+    margin-top: 10px;
+    margin-bottom: -60px;
     filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
 }
 
@@ -411,7 +411,9 @@ hr {
     }
 
     .pill-icon {
-        font-size: 5rem !important;
+        font-size: 15rem !important;
+        margin-top: 10px !important;
+        margin-bottom: -60px !important;
     }
 
     h1 {
